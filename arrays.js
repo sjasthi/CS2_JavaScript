@@ -69,6 +69,36 @@ document.write("<br>-------------------");
    document.write("<br> Maximum of array_84 =  " + array84(array_84));
    document.write("<br>-------------------");
 
+/* ----------------------------------------------------------------------
+8.5 Write a function to return the number of “even” numbers in an array. (DONE)
+ ---------------------------------------------------------------------- */
+ function array85(number_array) {
+    var even_number_count = 0;
+
+    for (var i = 0; i < number_array.length; i++) {
+    
+        // pseudo-code
+        // if the number from array is even, 
+        // then increase the count by 1
+        // if is is NOT even, 
+        // then ignore the number
+    
+        var temp_number = number_array[i];
+         
+         if (temp_number % 2 ==0) {
+            even_number_count = even_number_count+1;
+        }
+       
+    }
+
+    return even_number_count; 
+ }
+   
+   var array_85 = [2,3,44, 97, 46, 48, 87, 89, 65, 46, 46, 2, 4, 97];
+   document.write("<br> Assignment 8.5");
+   document.write("<br> array_85 = " + array_85);
+   document.write("<br> Number of even numbers in array_85 =  " + array85(array_85));
+   document.write("<br>-------------------");
    
 /* ----------------------------------------------------------------------
 8.21 Write a function that creates N elements in array. 
