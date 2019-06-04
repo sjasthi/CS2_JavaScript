@@ -43,13 +43,22 @@ document.write("<br>-------------------");
 
 /* ----------------------------------------------------------------------
 8.3 Write a function to return the “minimum” value of all the elements in a number array.
+Author: Satish Aaki
  ---------------------------------------------------------------------- */
-
  function array83(number_array) {
     // your code goes here
-   }
+    var min_element=10000;
+    for(var i=0; i<number_array.length; i++){
+ 		var current_element = number_array[i]
+        if(current_element<min_element){
+            min_element = current_element;
+        }
+    }
+    
+    return min_element;
+}
    
-   var array_83 = [10, 40, 30, 20];
+   var array_83 = [-10, 23,67,56, -100, 89,34,56,78]
    document.write("<br> Assignment 8.3.");
    document.write("<br> array_83 = " + array_83);
    document.write("<br> Minimum of array_83 =  " + array83(array_83));
