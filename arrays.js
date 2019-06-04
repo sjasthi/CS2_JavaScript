@@ -140,8 +140,61 @@ Author: Satish Aaki
    document.write("<br>-------------------");
    
 
+   
+/* ----------------------------------------------------------------------
+8.11 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
+For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6] 
+ ---------------------------------------------------------------------- */
+ function array86(number_array) {
+    var odd_number_count = 0;
 
+    for (var i = 0; i < number_array.length; i++) {
+    
+        // pseudo-code
+        // if the number from array is even, 
+        // then increase the count by 1
+        // if is is NOT even, 
+        // then ignore the number
+    
+        var temp_number = number_array[i];
+         
+         if (temp_number % 2 ==1) {
+            odd_number_count = odd_number_count+1;
+        }
+    }
 
+    return odd_number_count; 
+ }
+   
+   var array_86 = [2,3,44, 97, 46, 48, 87, 89, 65, 46, 46, 2, 4];
+   document.write("<br> Assignment 8.6");
+   document.write("<br> array_86 = " + array_86);
+   document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
+   document.write("<br>-------------------");
+   
+
+/* ----------------------------------------------------------------------
+8.16 Write a function that finds an element in an array.  If the input element is found in the array, the function returns “true”. If the element is not found, it returns “false”
+
+Author: Aaki Bhoomika
+ ---------------------------------------------------------------------- */
+   function array816(number_array, input_number) {
+    if (number_array.includes(input_number))
+    {
+        return true;
+    } else {
+        return false;
+    }						
+} 
+
+var input_array=[71,20,3,44,6,76,8, 87, 89, 67];
+document.write("<br>"+"the array is "+input_array);
+
+var input_item = 897;
+
+var is_item_found = array816(input_array, input_item);
+document.write("<br>"+"is the element present on the array?="+ is_item_found);
+document.write("<br>...............");
 
 /* ----------------------------------------------------------------------
 8.21 Write a function that creates N elements in array. 
