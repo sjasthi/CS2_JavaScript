@@ -359,7 +359,7 @@ function array824() {
     $number_array = array(1,1000);
 
     for ($i = 0; $i < 1000; $i++) {
-        $number_array[$i] = rand();
+        $number_array[$i] = rand(1,50);
     }
 
     return $number_array;
