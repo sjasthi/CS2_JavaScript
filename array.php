@@ -171,7 +171,7 @@ For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6]
    document.write("<br> array_86 = " + array_86);
    document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
    document.write("<br>-------------------");
-    <?php//8.13
+   <?php//8.13
 
 function reverse($arr){ //reverses elements in an array
     return array_reverse($arr);       
