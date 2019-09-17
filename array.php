@@ -113,24 +113,14 @@ Author: Satish Aaki
 8.6 Write a function to return the number of “odd” numbers in an array. (DONE)
  ---------------------------------------------------------------------- */
  function array86(number_array) {
-    var odd_number_count = 0;
-
-    for (var i = 0; i < number_array.length; i++) {
-    
-        // pseudo-code
-        // if the number from array is even, 
-        // then increase the count by 1
-        // if is is NOT even, 
-        // then ignore the number
-    
-        var temp_number = number_array[i];
-         
-         if (temp_number % 2 ==1) {
-            odd_number_count = odd_number_count+1;
+     $count = 0;
+    foreach ($finalArray as $arr) {
+        if ($arr % 2 == 1) {
+            $count++;
         }
     }
 
-    return odd_number_count; 
+    return $countt; 
  }
    
    var array_86 = [2,3,44, 97, 46, 48, 87, 89, 65, 46, 46, 2, 4];
@@ -172,6 +162,50 @@ For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6]
    document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
    document.write("<br>-------------------");
    
+
+/* ----------------------------------------------------------------------
+8.12 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
+Then print the number of “odd” numbers in the unioned array.
+Author: David Shittu
+ ---------------------------------------------------------------------- */
+
+ function unionAndOdd($array1, $array2) {
+
+$finalArray = array_merge($array1, $array2);
+sort($finalArray);
+print_r ($finalArray);
+echo json_encode($finalArray);
+$count = 0;
+
+for ($i = 0; $i < count($finalArray); $i++) {
+ 
+    $current = $finalArray[$i];
+    $next = $finalArray[$i++];
+    
+    if ($current == $next) {
+        array_splice($finalArray, $i++, 1);
+         
+    } else { 
+        break;
+    }
+}
+foreach ($finalArray as $arr) {
+    if ($arr % 2 == 1) {
+        $count++;
+    }
+}
+json_encode($finalArray);
+
+return  $count;  
+}
+
+<!-- $a1 = array(2,4,6,9,10);
+$a2 = array(2,3,5,6);
+
+$ans = unionAndOdd($a1, $a2);
+
+print_r ($ans); -->
+
 
 /* ----------------------------------------------------------------------
 8.16 Write a function that finds an element in an array.  If the input element is found in the array, the function returns “true”. If the element is not found, it returns “false”
