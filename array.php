@@ -21,16 +21,13 @@ echo "<br>-------------------------------";
 
 function array825($array){
   echo "<br>Value, Frequency"; 
-   $counter=0;
-    
-    for($i=$counter; $i<sizeof($array); $i++){
+    for($i=0; $i<sizeof($array); $i++){
         $frequencyCounter=0;
         for($j=0; $j<sizeof($array); $j++){
             if($array[$i]==$array[$j]){
                 $frequencyCounter++;
             }
         }
-        $counter++;
         echo "<br>".$array[$i]." ".$frequencyCounter;
     }    
 }
