@@ -40,12 +40,12 @@ function array82($number_array){
     }
     $average = ($sum_array/$count_array);
     echo "<br> Assignment 8.2";
-    echo "<br> array_2  ";
+    echo "<br> array_2  =";
     echo "<pre>".print_r($number_array)."</pre>";
     echo "<br> Average of array_2 =  ".$average;
     echo "<br>-------------------";
 }
-
+$array_2 = array(10, 40, 30, 20);
 
 array82($array_2);
 ?>
