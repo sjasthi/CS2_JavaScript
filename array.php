@@ -43,26 +43,19 @@ document.write("<br>-------------------");
 
 /* ----------------------------------------------------------------------
 8.3 Write a function to return the “minimum” value of all the elements in a number array.
-Author: Satish Aaki
  ---------------------------------------------------------------------- */
- function array83(number_array) {
-    // your code goes here
-    var min_element=10000;
-    for(var i=0; i<number_array.length; i++){
- 		var current_element = number_array[i]
-        if(current_element<min_element){
-            min_element = current_element;
-        }
-    }
-    
-    return min_element;
-}
-   
-   var array_83 = [-10, 23,67,56, -100, 89,34,56,78]
-   document.write("<br> Assignment 8.3.");
-   document.write("<br> array_83 = " + array_83);
-   document.write("<br> Minimum of array_83 =  " + array83(array_83));
-   document.write("<br>-------------------");
+ function array83($arr) {
+		return min($arr);
+	}
+
+	$array_83 = array(-10, 23,67,56, -100, 89,34,56,78);
+	echo "<br> Assignment 8.3";
+	echo "<br> array_83 = ";
+    print_r($array_83);
+	echo "<br> Minimum of array_83 = ";
+    echo array83($array_83);
+	echo "<br>-------------------";
+
 
 /* ----------------------------------------------------------------------
 8.4 Write a function to return the "maximum" value of all the elements in a number array.
@@ -245,23 +238,19 @@ you may get the following array returned by the function
 Reference: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_random2
  ---------------------------------------------------------------------- */
 
-function array823(number) {
-    // Note: we can also write var number_array = new Array();
-    var number_array = [];
+ function array823($num) {
+		$arr = array();
+		for ($i = 0; $i < $num - 1; $i++) {
+			array_push($arr, rand(1, 100));
+		}
+	return $arr;
+	}
 
-    for (var i = 0; i < number; i++) {
-        number_array[i] = Math.floor((Math.random() * 100) + 1);
-    }
-
-    return number_array;
-
-}
-
-var array_23 = array823(13);
-document.write("<br> Assignment 8.23");
-document.write("<br>array823(13) = " + array_23);
-document.write("<br>-------------------");
-
+	$array_23 = array823(13);
+	echo "<br> Assignment 8.23";
+	echo "<br>array823(13) = ";
+    print_r($array_23);
+	echo "<br>-------------------";
 
 /* ----------------------------------------------------------------------
 8.24 Write a function that returns an array of 1000 random numbers. 
