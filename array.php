@@ -32,6 +32,9 @@ document.write("<br>-------------------");
  ---------------------------------------------------------------------- */
  <?php
 function array82($number_array){
+    echo "<br> Assignment 8.2";
+    echo "<br> array_2  =";
+    echo "<pre>".print_r($number_array)."</pre>";
     $sum_array = 0;
     $count_array = 0;
     foreach ($number_array as $number_array){
@@ -39,9 +42,6 @@ function array82($number_array){
         $count_array +=1;
     }
     $average = ($sum_array/$count_array);
-    echo "<br> Assignment 8.2";
-    echo "<br> array_2  =";
-    echo "<pre>".print_r($number_array)."</pre>";
     echo "<br> Average of array_2 =  ".$average;
     echo "<br>-------------------";
 }
