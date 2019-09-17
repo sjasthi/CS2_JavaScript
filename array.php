@@ -61,15 +61,15 @@ document.write("<br>-------------------");
 8.4 Write a function to return the "maximum" value of all the elements in a number array.
  ---------------------------------------------------------------------- */
 
- function array84(number_array) {
-    // your code goes here
-   }
+function array84($array) {
+    return max($array);
+};
    
-   var array_84 = [10, 40, 30, 20];
-   document.write("<br> Assignment 8.4");
-   document.write("<br> array_84 = " + array_84);
-   document.write("<br> Maximum of array_84 =  " + array84(array_84));
-   document.write("<br>-------------------");
+   $array = array('10', '40', '30', '20');
+   echo "<br> Assignment 8.4 <br>";
+   print_r($array);
+   echo "<br> Maximum of array =  " . array84($array);
+   echo "<br>-------------------";
 
 /* ----------------------------------------------------------------------
 8.5 Write a function to return the number of “even” numbers in an array. (DONE)
@@ -218,14 +218,14 @@ it should print the following string.
 [0,10]  [1,25], [2,5], [3,99]
 ---------------------------------------------------------------------- */
 
-function array822(an_array) {
-    // your code goes here
+function array822($array) {
+   print_r($array);
 }
 
-var array_22 = [30, 40, 25, 15, 5, 3, 98, 56, 78, 57];
-document.write("<br> Assignment 8.22");
-array822(array_22);
-document.write("<br>-------------------");
+$array = array('30', '40', '25', '15', '5', '3', '98', '56', '78', '57');
+echo "<br> Assignment 8.22 <br>";
+array822($array);
+echo "<br>-------------------";
 
 
 /* ----------------------------------------------------------------------
