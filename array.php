@@ -150,18 +150,42 @@ For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6]
 
     for (var i = 0; i < number_array.length; i++) {
     
-        // pseudo-code
-        // if the number from array is even, 
-        // then increase the count by 1
-        // if is is NOT even, 
-        // then ignore the number
-    
+8.11 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
+For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6] 
+ ---------------------------------------------------------------------- */
+ function array86(number_array) {
+    var odd_number_count = 0;
+
+    for (var i = 0; i < number_array.length; i++) {
+        $aunion= array_merge(
+            array_intersect($x, $y),
+            array_diff($x, $y),     
+            array_diff($y, $x)
+
+        );
+        return $aunion;
+    }
+    $a = array(4,5,6);
+    $b = array(3,4,5);
+    print_r(array_union($a, $b));
+    ?>
         var temp_number = number_array[i];
          
          if (temp_number % 2 ==1) {
             odd_number_count = odd_number_count+1;
         }
     }
+
+    return odd_number_count; 
+ }
+   
+   var array_86 = [2,3,44, 97, 46, 48, 87, 89, 65, 46, 46, 2, 4];
+   document.write("<br> Assignment 8.6");
+   document.write("<br> array_86 = " + array_86);
+   document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
+   document.write("<br>-------------------");
+   
+
 
     return odd_number_count; 
  }
