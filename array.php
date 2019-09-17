@@ -57,40 +57,33 @@ document.write("<br>-------------------");
 
 /* ----------------------------------------------------------------------
 8.3 Write a function to return the “minimum” value of all the elements in a number array.
-Author: Satish Aaki
  ---------------------------------------------------------------------- */
- function array83(number_array) {
-    // your code goes here
-    var min_element=10000;
-    for(var i=0; i<number_array.length; i++){
- 		var current_element = number_array[i]
-        if(current_element<min_element){
-            min_element = current_element;
-        }
-    }
-    
-    return min_element;
-}
-   
-   var array_83 = [-10, 23,67,56, -100, 89,34,56,78]
-   document.write("<br> Assignment 8.3.");
-   document.write("<br> array_83 = " + array_83);
-   document.write("<br> Minimum of array_83 =  " + array83(array_83));
-   document.write("<br>-------------------");
+ function array83($arr) {
+		return min($arr);
+	}
+
+	$array_83 = array(-10, 23,67,56, -100, 89,34,56,78);
+	echo "<br> Assignment 8.3";
+	echo "<br> array_83 = ";
+    print_r($array_83);
+	echo "<br> Minimum of array_83 = ";
+    echo array83($array_83);
+	echo "<br>-------------------";
+
 
 /* ----------------------------------------------------------------------
 8.4 Write a function to return the "maximum" value of all the elements in a number array.
  ---------------------------------------------------------------------- */
 
- function array84(number_array) {
-    // your code goes here
-   }
+function array84($array) {
+    return max($array);
+};
    
-   var array_84 = [10, 40, 30, 20];
-   document.write("<br> Assignment 8.4");
-   document.write("<br> array_84 = " + array_84);
-   document.write("<br> Maximum of array_84 =  " + array84(array_84));
-   document.write("<br>-------------------");
+   $array = array('10', '40', '30', '20');
+   echo "<br> Assignment 8.4 <br>";
+   print_r($array);
+   echo "<br> Maximum of array =  " . array84($array);
+   echo "<br>-------------------";
 
 /* ----------------------------------------------------------------------
 8.5 Write a function to return the number of “even” numbers in an array. (DONE)
@@ -126,10 +119,10 @@ Author: Satish Aaki
 /* ----------------------------------------------------------------------
 8.6 Write a function to return the number of “odd” numbers in an array. (DONE)
  ---------------------------------------------------------------------- */
- function array86(number_array) {
-    var odd_number_count = 0;
-
-    for (var i = 0; i < number_array.length; i++) {
+ function array86($number_array) {
+    $odd_number_count = 0;
+	
+    for ($i = 0; $i < count($number_array); $i++) {
     
         // pseudo-code
         // if the number from array is even, 
@@ -137,23 +130,58 @@ Author: Satish Aaki
         // if is is NOT even, 
         // then ignore the number
     
-        var temp_number = number_array[i];
+        $temp_number = $number_array[$i];
          
-         if (temp_number % 2 ==1) {
-            odd_number_count = odd_number_count+1;
+         if ($temp_number % 2 ==1) {
+            $odd_number_count = $odd_number_count+1;
         }
     }
 
-    return odd_number_count; 
+    return $odd_number_count; 
+ }
+
+ function banana(){
+	 echo "Banana";
  }
    
-   var array_86 = [2,3,44, 97, 46, 48, 87, 89, 65, 46, 46, 2, 4];
-   document.write("<br> Assignment 8.6");
-   document.write("<br> array_86 = " + array_86);
-   document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
-   document.write("<br>-------------------");
+   $array_86 = [2,3,44, 97, 46, 48, 87, 89, 65, 46, 46, 2, 4];
+   echo ("<br> Assignment 8.6");
+   echo ("<br> array_86 = " + array_86);
+   echo ("<br> Number of odd numbers in array_86 =  " + array86(array_86));
+   echo ("<br>-------------------");
    
+/*
+8.7 Reverse an inout array.
+*/
+function array87($number_array) {
+	$reverse_array = array_reverse($number_array,true);
+	print_r($reverse_array);
+}
 
+$input_array=[1,2,3,4,5,6,7,8,9,0 ];
+
+echo "<br>"."Reverse Array: ".print_r($input_array);
+
+$reverse_array = array87($input_array);
+
+/*
+8.8 Product				    
+ */
+					    
+function product($numbers){
+    $product = 1;
+    
+    foreach($numbers as $number){
+        $product = $product * $number;
+    }
+    
+    return $product;
+}
+
+$numbers = array(1, 2, 3, 4, 5);
+
+echo product($numbers);
+echo "<br>";				    
    
 /* ----------------------------------------------------------------------
 8.11 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
@@ -186,6 +214,33 @@ For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6]
    document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
    document.write("<br>-------------------");
    
+   /* ----------------------------------------------------------------------
+8.12 A function that adds Rover's favorite fruits to his array. Rover only likes fruits that start
+the letter 'a'. In this case only 'apple' is the acceptable value.
+ ---------------------------------------------------------------------- */
+
+ $fruits = array("apple", "banana", "kiwi", "mango", "blueberry");
+    $roversFavorites = array();
+    
+    for($i = 0; $i < sizeof($fruits); $i++){
+        if($fruits[$i][0] == "a"){
+            array_push($roversFavorites,$fruits[$i]);
+        }
+    }
+
+    for($i = 0; $i < sizeof($roversFavorites); $i++){
+        echo $roversFavorites[$i];
+    }
+
+ /* ----------------------------------------------------------------------
+8.14 Function to remove all of the values from Rover's array of favorite fruits. Though a simple function
+I thought it was pretty useful.
+ ---------------------------------------------------------------------- */
+
+ for ($i = 0; $i < count($roversFavorites); $i++) { 
+     unset($roversFavorites[$i]); 
+}
+
 
 /* ----------------------------------------------------------------------
 8.16 Write a function that finds an element in an array.  If the input element is found in the array, the function returns “true”. If the element is not found, it returns “false”
@@ -208,6 +263,27 @@ var input_item = 897;
 var is_item_found = array816(input_array, input_item);
 document.write("<br>"+"is the element present on the array?="+ is_item_found);
 document.write("<br>...............");
+
+/*
+8.18 Factorial
+*/
+
+function factorial($n){
+    $factorial = 1;
+    
+    if($n == 0 || $n == 1)
+        return 1;
+    
+    for($i = 2; $i <= $n; $i++){
+        $factorial = $factorial * $i;
+    }
+    
+    return $factorial;
+}
+
+$n = 4;
+
+echo factorial($n);
 
 /* ----------------------------------------------------------------------
 8.21 Write a function that creates N elements in array. 
@@ -239,14 +315,14 @@ it should print the following string.
 [0,10]  [1,25], [2,5], [3,99]
 ---------------------------------------------------------------------- */
 
-function array822(an_array) {
-    // your code goes here
+function array822($array) {
+   print_r($array);
 }
 
-var array_22 = [30, 40, 25, 15, 5, 3, 98, 56, 78, 57];
-document.write("<br> Assignment 8.22");
-array822(array_22);
-document.write("<br>-------------------");
+$array = array('30', '40', '25', '15', '5', '3', '98', '56', '78', '57');
+echo "<br> Assignment 8.22 <br>";
+array822($array);
+echo "<br>-------------------";
 
 
 /* ----------------------------------------------------------------------
@@ -259,23 +335,19 @@ you may get the following array returned by the function
 Reference: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_random2
  ---------------------------------------------------------------------- */
 
-function array823(number) {
-    // Note: we can also write var number_array = new Array();
-    var number_array = [];
+ function array823($num) {
+		$arr = array();
+		for ($i = 0; $i < $num - 1; $i++) {
+			array_push($arr, rand(1, 100));
+		}
+	return $arr;
+	}
 
-    for (var i = 0; i < number; i++) {
-        number_array[i] = Math.floor((Math.random() * 100) + 1);
-    }
-
-    return number_array;
-
-}
-
-var array_23 = array823(13);
-document.write("<br> Assignment 8.23");
-document.write("<br>array823(13) = " + array_23);
-document.write("<br>-------------------");
-
+	$array_23 = array823(13);
+	echo "<br> Assignment 8.23";
+	echo "<br>array823(13) = ";
+    print_r($array_23);
+	echo "<br>-------------------";
 
 /* ----------------------------------------------------------------------
 8.24 Write a function that returns an array of 1000 random numbers. 
