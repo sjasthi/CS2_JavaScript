@@ -1,31 +1,25 @@
 /*
-  Name: arrays.js
+  Name: arrays.php
   Assignment: 8.1 to 8.25
   Purpose: Working with arrays
   Author: Siva jasthi
   */
 
 
-/* ----------------------------------------------------------------------
-8.1 Write a function to calculate the sum of all the elements in a number array.
- ---------------------------------------------------------------------- */
-
-function array81(number_array) {
-    var sum = 0;
-
-    for (var i = 0; i < number_array.length; i++) {
-        sum = sum + number_array[i];
+function array81($array){
+    $sum=0;
+    for($i=0; $i<sizeof($array); $i++){
+        $sum = $sum + $array[$i];
     }
-
-    return sum;
-
+    return $sum;
 }
+$marks = array(80, 86, 81, 99, 88, 83, 82);
+echo "<br>Assignment 8.1";
+echo "<br>Marks = ";
+print_r ($marks);
+echo "<br>Sum of marks = ".array81($marks);
+echo "<br>-------------------------------";
 
-var marks = [80, 86, 81, 99, 88, 83, 82];
-document.write("<br> Assignment 8.1");
-document.write("<br> Marks = " + marks);
-document.write("<br> Sum of marks =  " + array81(marks));
-document.write("<br>-------------------");
 
 /* ----------------------------------------------------------------------
 8.2 Write a function to return the average of all the elements in a number array.
@@ -369,16 +363,24 @@ You can use the array returned by the function 824 (previous exercise)
 as the input to array825 function.
  ---------------------------------------------------------------------- */
 
-function array825(number_array) {
-    // what is the algorithm?
-
+function array825($array){
+  echo "<br>Value, Frequency"; 
+   $counter=0;
+    
+    for($i=$counter; $i<sizeof($array); $i++){
+        $frequencyCounter=0;
+        for($j=0; $j<sizeof($array); $j++){
+            if($array[$i]==$array[$j]){
+                $frequencyCounter++;
+            }
+        }
+        $counter++;
+        echo "<br>".$array[$i]." ".$frequencyCounter;
+    }    
 }
+$array_25 = $array824();
+//$array_25 = array(1,5,6,4,3,2,1,5,6,9,4,3,2,1,4,1,4,1,1);
+echo "<br> Assignment 8.25";
+array825($array_25);
+echo "<br>------------";
 
-// we are using the previous function to create any array
-// of 1000 numbers between 1 and 50
-var array_25 = array824();
-
-document.write("<br> Assignment 8.25");
-// call the function  to produce the frequency table
-array825(array_25);
-document.write("<br>-------------------");
