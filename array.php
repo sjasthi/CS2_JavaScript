@@ -221,12 +221,14 @@ document.write("<br>...............");
 8.17 PHP Function 2 for Joshua Shold 
  ---------------------------------------------------------------------- */
  <?php
+function familyName($fname, $year) {
+    echo "$fname Shold. Born in $year <br>";
+}
 
- $myfamily = array("Joshua", "Abby", "Madi", "Lincoln", "Scarlett");
- echo "Size of the array is: ". sizeof($myfamily);
- 
- ?>
-
+familyName("Joshua", "1978");
+familyName("Abby", "1982");
+familyName("Madison", "2002");
+?>
 
 /* ----------------------------------------------------------------------
 8.21 Write a function that creates N elements in array. 
