@@ -165,6 +165,33 @@ For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6]
    document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
    document.write("<br>-------------------");
    
+   /* ----------------------------------------------------------------------
+8.12 A function that adds Rover's favorite fruits to his array. Rover only likes fruits that start
+the letter 'a'. In this case only 'apple' is the acceptable value.
+ ---------------------------------------------------------------------- */
+
+ $fruits = array("apple", "banana", "kiwi", "mango", "blueberry");
+    $roversFavorites = array();
+    
+    for($i = 0; $i < sizeof($fruits); $i++){
+        if($fruits[$i][0] == "a"){
+            array_push($roversFavorites,$fruits[$i]);
+        }
+    }
+
+    for($i = 0; $i < sizeof($roversFavorites); $i++){
+        echo $roversFavorites[$i];
+    }
+
+ /* ----------------------------------------------------------------------
+8.14 Function to remove all of the values from Rover's array of favorite fruits. Though a simple function
+I thought it was pretty useful.
+ ---------------------------------------------------------------------- */
+
+ for ($i = 0; $i < count($roversFavorites); $i++) { 
+     unset($roversFavorites[$i]); 
+}
+
 
 /* ----------------------------------------------------------------------
 8.16 Write a function that finds an element in an array.  If the input element is found in the array, the function returns “true”. If the element is not found, it returns “false”
