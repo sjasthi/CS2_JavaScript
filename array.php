@@ -144,16 +144,12 @@ Author: Satish Aaki
 8.9 PHP Function 1 for Joshua Shold 
  ---------------------------------------------------------------------- */
  <?php
+function familyName($fname) {
+    echo "$fname Shold.<br>";
+}
 
-$students = array("Joshua", "Lincoln", "Madi");
-
-
-echo is_array($students) ? 'Array ' : 'not an Array ';
-
-$myfamsize = "five";
-
-
-echo is_array($myfamsize) ? 'Array ' : 'not an Array ';
+familyName("Joshua");
+familyName("Abby");
 
 ?>
  
@@ -348,12 +344,5 @@ document.write("<br> Assignment 8.25");
 array825(array_25);
 document.write("<br>-------------------");
 
-/* 2 New PHP Functions for Joshua Shold
-*/
-<?php
 
-$lamborghinis = array("Urus", "Huracan", "Aventador");
-echo "Size of the array is: ". sizeof($lamborghinis);
-
-?>
 
