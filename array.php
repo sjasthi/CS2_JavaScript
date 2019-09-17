@@ -120,7 +120,7 @@ Author: Satish Aaki
         }
     }
 
-    return $countt; 
+    return $count; 
  }
    
    var array_86 = [2,3,44, 97, 46, 48, 87, 89, 65, 46, 46, 2, 4];
