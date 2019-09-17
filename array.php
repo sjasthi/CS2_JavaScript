@@ -270,23 +270,47 @@ echo '<pre>' ,print_r ($new_array),'</pre>';
 8.16 Write a function that finds an element in an array.  If the input element is found in the array, the function returns “true”. If the element is not found, it returns “false”
 Author: Aaki Bhoomika
  ---------------------------------------------------------------------- */
-   function array816(number_array, input_number) {
-    if (number_array.includes(input_number))
-    {
-        return true;
-    } else {
-        return false;
-    }						
-} 
+ <?php
 
-var input_array=[71,20,3,44,6,76,8, 87, 89, 67];
-document.write("<br>"+"the array is "+input_array);
+function unionAndOdd($number_array, $input_number) {
 
-var input_item = 897;
+    $finalArray = array_merge($number_array, $input_number);
+    sort($finalArray);
+    print_r ($finalArray);
+    echo json_encode($finalArray);
+    $count = 0;
+   
+    for ($i = 0; $i < count($finalArray); $i++) {
+     
+        $current = $finalArray[$i];
+        $next = $finalArray[$i++];
+       
+        if ($current == $next) {
+            array_splice($finalArray, $i++, 1);
+             
+        } else {
+            break;
+        }
+    }
+    foreach ($finalArray as $arr) {
+        if ($arr % 2 == 1) {
+            $count++;
+        }
+    }
+    json_encode($finalArray);
+   
+    return  $count;  
+}
 
-var is_item_found = array816(input_array, input_item);
-document.write("<br>"+"is the element present on the array?="+ is_item_found);
-document.write("<br>...............");
+$array1 = array(2,4,6,9,10);
+$array2 = array(2,3,5,6);
+
+$output = unionAndOdd($array1, $array2);
+
+print_r ($output);
+
+?>
+
 
 /*
 8.18 Factorial
