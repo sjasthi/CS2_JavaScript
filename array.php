@@ -105,10 +105,10 @@ function array84($array) {
 /* ----------------------------------------------------------------------
 8.6 Write a function to return the number of “odd” numbers in an array. (DONE)
  ---------------------------------------------------------------------- */
- function array86(number_array) {
-    var odd_number_count = 0;
-
-    for (var i = 0; i < number_array.length; i++) {
+ function array86($number_array) {
+    $odd_number_count = 0;
+	
+    for ($i = 0; $i < count($number_array); $i++) {
     
         // pseudo-code
         // if the number from array is even, 
@@ -116,21 +116,25 @@ function array84($array) {
         // if is is NOT even, 
         // then ignore the number
     
-        var temp_number = number_array[i];
+        $temp_number = $number_array[$i];
          
-         if (temp_number % 2 ==1) {
-            odd_number_count = odd_number_count+1;
+         if ($temp_number % 2 ==1) {
+            $odd_number_count = $odd_number_count+1;
         }
     }
 
-    return odd_number_count; 
+    return $odd_number_count; 
+ }
+
+ function banana(){
+	 echo "Banana";
  }
    
-   var array_86 = [2,3,44, 97, 46, 48, 87, 89, 65, 46, 46, 2, 4];
-   document.write("<br> Assignment 8.6");
-   document.write("<br> array_86 = " + array_86);
-   document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
-   document.write("<br>-------------------");
+   $array_86 = [2,3,44, 97, 46, 48, 87, 89, 65, 46, 46, 2, 4];
+   echo ("<br> Assignment 8.6");
+   echo ("<br> array_86 = " + array_86);
+   echo ("<br> Number of odd numbers in array_86 =  " + array86(array_86));
+   echo ("<br>-------------------");
    
 /*
 8.8 Product				    
