@@ -138,8 +138,22 @@ Author: Satish Aaki
    document.write("<br> array_86 = " + array_86);
    document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
    document.write("<br>-------------------");
-   
 
+/* ----------------------------------------------------------------------
+8.7 Write a function that reverses an array of [1,2,3] will be [3,2,1]
+ ---------------------------------------------------------------------- */
+<?php
+function array87($number_array) {
+	$reverse_array = array_reverse($number_array,true);
+	print_r($reverse_array);
+}
+
+$input_array=[1,2,3,4,5,6,7,8,9,0 ];
+
+echo "<br>"."Reverse Array: ".print_r($input_array);
+
+$reverse_array = array87($input_array);
+?>
    
 /* ----------------------------------------------------------------------
 8.11 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
