@@ -212,14 +212,58 @@ the letter 'a'. In this case only 'apple' is the acceptable value.
         echo $roversFavorites[$i];
     }
 
- /* ----------------------------------------------------------------------
-8.14 Function to remove all of the values from Rover's array of favorite fruits. Though a simple function
-I thought it was pretty useful.
- ---------------------------------------------------------------------- */
 
- for ($i = 0; $i < count($roversFavorites); $i++) { 
-     unset($roversFavorites[$i]); 
+ /* ----------------------------------------------------------------------
+8.14 Function to doubble_up an array
+-------------------------------------------------------------*/
+
+function doubble_up($arr){//duplicates each element in the array
+    $output = array();
+    for($i = 0; $i < count($arr)*2; $i++){
+        array_push($output,$arr[floor($i/2)]);
+    }
+    return $output;
 }
+$array = array("red","yellow","blue","green");
+echo '<pre>' ,print_r ($array),'</pre>';
+$new_array = doubble_up($array);
+echo '<pre>' ,print_r ($new_array),'</pre>';
+?>
+	    
+ /* ----------------------------------------------------------------------
+8.14 Function to reverse an array
+-------------------------------------------------------------*/
+function reverse($arr){ //reverses elements in an array
+    return array_reverse($arr);       
+}
+$array = array("red","yellow","blue","green");
+echo '<pre>' ,print_r ($array),'</pre>';
+$new_array = reverse($array);
+echo '<pre>' ,print_r ($new_array),'</pre>';
+?>
+
+ /* ----------------------------------------------------------------------
+8.14 Function to reverse an array
+-------------------------------------------------------------*/
+function reverse($arr){ //reverses elements in an array
+    return array_reverse($arr);       
+}
+$array = array("red","yellow","blue","green");
+echo '<pre>' ,print_r ($array),'</pre>';
+$new_array = reverse($array);
+echo '<pre>' ,print_r ($new_array),'</pre>';
+
+   function doubble_up($arr){//duplicates each element in the array
+    $output = array();
+    for($i = 0; $i < count($arr)*2; $i++){
+        array_push($output,$arr[floor($i/2)]);
+    }
+    return $output;
+}
+$array = array("red","yellow","blue","green");
+echo '<pre>' ,print_r ($array),'</pre>';
+$new_array = doubble_up($array);
+echo '<pre>' ,print_r ($new_array),'</pre>';
 
 
 /* ----------------------------------------------------------------------
