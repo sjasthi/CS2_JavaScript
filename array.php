@@ -132,7 +132,24 @@ function array84($array) {
    document.write("<br> Number of odd numbers in array_86 =  " + array86(array_86));
    document.write("<br>-------------------");
    
+/*
+8.8 Product				    
+ */
+					    
+function product($numbers){
+    $product = 1;
+    
+    foreach($numbers as $number){
+        $product = $product * $number;
+    }
+    
+    return $product;
+}
 
+$numbers = array(1, 2, 3, 4, 5);
+
+echo product($numbers);
+echo "<br>";				    
    
 /* ----------------------------------------------------------------------
 8.11 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
@@ -214,6 +231,27 @@ var input_item = 897;
 var is_item_found = array816(input_array, input_item);
 document.write("<br>"+"is the element present on the array?="+ is_item_found);
 document.write("<br>...............");
+
+/*
+8.18 Factorial
+*/
+
+function factorial($n){
+    $factorial = 1;
+    
+    if($n == 0 || $n == 1)
+        return 1;
+    
+    for($i = 2; $i <= $n; $i++){
+        $factorial = $factorial * $i;
+    }
+    
+    return $factorial;
+}
+
+$n = 4;
+
+echo factorial($n);
 
 /* ----------------------------------------------------------------------
 8.21 Write a function that creates N elements in array. 
