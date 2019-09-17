@@ -140,7 +140,27 @@ Author: Satish Aaki
    document.write("<br>-------------------");
    
 
-   
+  /* ----------------------------------------------------------------------
+8.9 PHP Function 1 for Joshua Shold 
+ ---------------------------------------------------------------------- */
+ <?php
+
+$students = array("Joshua", "Lincoln", "Madi");
+
+
+echo is_array($students) ? 'Array ' : 'not an Array ';
+
+$myfamsize = "five";
+
+
+echo is_array($myfamsize) ? 'Array ' : 'not an Array ';
+
+?>
+ 
+ /* ----------------------------------------------------------------------
+8.11 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
+For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6] 
+ ---------------------------------------------------------------------- */ 
 /* ----------------------------------------------------------------------
 8.11 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
 For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6] 
@@ -175,6 +195,7 @@ For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6]
 
 /* ----------------------------------------------------------------------
 8.16 Write a function that finds an element in an array.  If the input element is found in the array, the function returns “true”. If the element is not found, it returns “false”
+
 Author: Aaki Bhoomika
  ---------------------------------------------------------------------- */
    function array816(number_array, input_number) {
@@ -194,6 +215,18 @@ var input_item = 897;
 var is_item_found = array816(input_array, input_item);
 document.write("<br>"+"is the element present on the array?="+ is_item_found);
 document.write("<br>...............");
+
+
+ /* ----------------------------------------------------------------------
+8.17 PHP Function 2 for Joshua Shold 
+ ---------------------------------------------------------------------- */
+ <?php
+
+ $myfamily = array("Joshua", "Abby", "Madi", "Lincoln", "Scarlett");
+ echo "Size of the array is: ". sizeof($myfamily);
+ 
+ ?>
+
 
 /* ----------------------------------------------------------------------
 8.21 Write a function that creates N elements in array. 
@@ -289,10 +322,12 @@ document.write("<br>-------------------");
 8.25 Write a function that produces a frequency table of array elements.  
 How many times an element is appearing in an array? 
 Publish the frequency table in the following format.
+
 Value, Frequency
 10, 4
 20, 8
 15, 2
+
 You can use the array returned by the function 824 (previous exercise) 
 as the input to array825 function.
  ---------------------------------------------------------------------- */
@@ -310,3 +345,13 @@ document.write("<br> Assignment 8.25");
 // call the function  to produce the frequency table
 array825(array_25);
 document.write("<br>-------------------");
+
+/* 2 New PHP Functions for Joshua Shold
+*/
+<?php
+
+$lamborghinis = array("Urus", "Huracan", "Aventador");
+echo "Size of the array is: ". sizeof($lamborghinis);
+
+?>
+
