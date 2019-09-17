@@ -140,7 +140,27 @@ Author: Satish Aaki
    document.write("<br>-------------------");
    
 
-   
+  /* ----------------------------------------------------------------------
+8.9 PHP Function 1 for Joshua Shold 
+ ---------------------------------------------------------------------- */
+ <?php
+
+$students = array("Joshua", "Lincoln", "Madi");
+
+
+echo is_array($students) ? 'Array ' : 'not an Array ';
+
+$myfamsize = "five";
+
+
+echo is_array($myfamsize) ? 'Array ' : 'not an Array ';
+
+?>
+ 
+ /* ----------------------------------------------------------------------
+8.11 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
+For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6] 
+ ---------------------------------------------------------------------- */ 
 /* ----------------------------------------------------------------------
 8.11 Write a function that returns union of two arrays. The combined array should not contain any duplicates.
 For example, passing two arrays [4,5,6] and [3,4,5] should return  [3,d4,5,6] 
@@ -195,6 +215,18 @@ var input_item = 897;
 var is_item_found = array816(input_array, input_item);
 document.write("<br>"+"is the element present on the array?="+ is_item_found);
 document.write("<br>...............");
+
+
+ /* ----------------------------------------------------------------------
+8.17 PHP Function 2 for Joshua Shold 
+ ---------------------------------------------------------------------- */
+ <?php
+
+ $myfamily = array("Joshua", "Abby", "Madi", "Lincoln", "Scarlett");
+ echo "Size of the array is: ". sizeof($myfamily);
+ 
+ ?>
+
 
 /* ----------------------------------------------------------------------
 8.21 Write a function that creates N elements in array. 
@@ -313,3 +345,13 @@ document.write("<br> Assignment 8.25");
 // call the function  to produce the frequency table
 array825(array_25);
 document.write("<br>-------------------");
+
+/* 2 New PHP Functions for Joshua Shold
+*/
+<?php
+
+$lamborghinis = array("Urus", "Huracan", "Aventador");
+echo "Size of the array is: ". sizeof($lamborghinis);
+
+?>
+
