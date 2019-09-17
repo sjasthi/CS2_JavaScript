@@ -20,25 +20,37 @@ echo "<br>-------------------------------";
 
 
 function array825($array){
-  echo "<br>Value, Frequency"; 
-    for($i=0; $i<sizeof($array); $i++){
-        $frequencyCounter=0;
-        for($j=0; $j<sizeof($array); $j++){
-            if($array[$i]==$array[$j]){
-                $frequencyCounter++;
-            }
-        }
-        echo "<br>".$array[$i]." ".$frequencyCounter;
-    }    
-}
-
-
-
-$array_25 = $array824();
-//$array_25 = array(1,5,6,4,3,2,1,5,6,9,4,3,2,1,4,1,4,1,1);
-echo "<br> Assignment 8.25";
-array825($array_25);
-echo "<br>------------";
+    echo "<br>Value, Frequency";  
+     $temp_array=array();
+      
+      for($i=0; $i<sizeof($array); $i++){
+          $frequencyCounter=0;
+          
+          for($counter=0; $counter<sizeof($temp_array); $counter++){
+              if($array[$i]==$temp_array[$counter]){
+                  break 2;
+              }
+          }
+          
+          for($j=0; $j<sizeof($array); $j++){
+              if($array[$i]==$array[$j]){
+                  if($frequencyCounter==0){
+                      array_push($temp_array,$array[$i]);
+                  }
+                  $frequencyCounter++;
+              }
+          }
+          echo "<br>".$array[$i]." ".$frequencyCounter;
+          
+          
+      }    
+  }
+  
+  $array_25 = $array824();
+  //$array_25 = array(1,5,6,4,3,2,1,5,6,9,4,3,2,1,4,1,4,1,1);
+  echo "<br> Assignment 8.25";
+  array825($array_25);
+  echo "<br>------------";
 
 ?>
 
