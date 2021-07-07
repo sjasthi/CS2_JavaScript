@@ -24,11 +24,25 @@ echo "<br>-------------------------------";
 /* ----------------------------------------------------------------------
 8.2 Write a function to return the average of all the elements in a number array.
  ---------------------------------------------------------------------- */
-
- function array82(number_array) {
- // your code goes here
+ <?php
+function array82($number_array){
+    echo "<br> Assignment 8.2";
+    echo "<br> array_2  =";
+    echo "<pre>".print_r($number_array)."</pre>";
+    $sum_array = 0;
+    $count_array = 0;
+    foreach ($number_array as $number_array){
+        $sum_array += $number_array;
+        $count_array +=1;
+    }
+    $average = ($sum_array/$count_array);
+    echo "<br> Average of array_2 =  ".$average;
+    echo "<br>-------------------";
 }
+$array_2 = array(10, 40, 30, 20);
 
+array82($array_2);
+?>
 var array_2 = [10, 40, 30, 20];
 document.write("<br> Assignment 8.2.");
 document.write("<br> array_2 = " + array_2);
@@ -378,16 +392,23 @@ Reference: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_random2
 Each random number should be between 1 and 50.
  ---------------------------------------------------------------------- */
 
+ <?php
 function array824() { 
-    var number_array = [];
+    $number_array = array(1,1000);
 
-    for (var i = 0; i < 1000; i++) {
-        number_array[i] = Math.floor((Math.random() * 50) + 1);
+    for ($i = 0; $i < 1000; $i++) {
+        $number_array[$i] = rand(1,50);
     }
 
-    return number_array;
+    return $number_array;
 
 }
+$array_24= array824();
+echo "<br> Assignment 8.24";
+echo "<br>array824() = ";
+echo "<pre>".print_r($array_24)."</pre>";
+echo "---------------------------------------;"
+?>
 
 var array_24 = array824();
 document.write("<br> Assignment 8.24");
